@@ -1,4 +1,4 @@
-import 'package:firebase_app/ui/verify_code.dart';
+import 'package:firebase_app/ui/auth/verify_code.dart';
 import 'package:firebase_app/utils/utils.dart';
 import 'package:firebase_app/widgets/round_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';

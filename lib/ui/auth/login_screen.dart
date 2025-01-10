@@ -1,6 +1,7 @@
-import 'package:firebase_app/ui/login_with_phone.dart';
-import 'package:firebase_app/ui/posts/post_screen.dart';
-import 'package:firebase_app/ui/signup_screen.dart';
+import 'package:firebase_app/ui/auth/login_with_phone.dart';
+import 'package:firebase_app/ui/firestore/firestore_list_screen.dart';
+import 'package:firebase_app/ui/auth/signup_screen.dart';
+import 'package:firebase_app/ui/forgot_password.dart';
 import 'package:firebase_app/utils/utils.dart';
 import 'package:firebase_app/widgets/round_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -40,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
         .then((value) {
       Utils.toastMessage("Login Successful");
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => PostScreen()));
+          context, MaterialPageRoute(builder: (context) => FireStoreScreen()));
       setState(() {
         isLoading = false;
       });
@@ -119,6 +120,17 @@ class _LoginScreenState extends State<LoginScreen> {
                         }
                       },
                     ),
+                    Align(
+                        alignment: Alignment.centerRight,
+                        child: TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          ForgotPasswordScreen()));
+                            },
+                            child: Text("Forgot Password?"))),
                     SizedBox(
                       height: 30,
                     ),

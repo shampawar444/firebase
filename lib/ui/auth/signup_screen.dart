@@ -1,4 +1,4 @@
-import 'package:firebase_app/ui/login_screen.dart';
+import 'package:firebase_app/ui/auth/login_screen.dart';
 import 'package:firebase_app/utils/utils.dart';
 import 'package:firebase_app/widgets/round_button.dart';
 import 'package:firebase_auth/firebase_auth.dart';
